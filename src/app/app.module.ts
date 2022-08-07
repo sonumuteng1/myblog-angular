@@ -9,6 +9,9 @@ import { CsharpComponent } from './topics/csharp/csharp.component';
 import { AngularComponent } from './topics/angular/angular.component';
 import { FlutterComponent } from './topics/flutter/flutter.component';
 import { ArticleDetailComponent } from './topics/article-detail/article-detail.component';
+import { ArticleDetailsComponent } from './article-details/article-details.component';
+import { ArticlesComponent } from './articles/articles.component';
+import { CategoryComponent } from './category/category.component';
 
 @NgModule({
   declarations: [// Bir component eklemek istediğimizde buraya ekleriz. 
@@ -20,7 +23,10 @@ import { ArticleDetailComponent } from './topics/article-detail/article-detail.c
     AngularComponent,
     FlutterComponent,
     
-    ArticleDetailComponent
+    ArticleDetailComponent,
+          ArticleDetailsComponent,
+          ArticlesComponent,
+          CategoryComponent
   ],
   imports: [ //dışarıdan bir modül eklemek istediğimizde buraya ekleriz. 
     BrowserModule
