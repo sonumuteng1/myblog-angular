@@ -1,4 +1,24 @@
-<div class="card mb-3" *ngFor="let article of articles">
+<div *ngIf="articles.length>0; else no_articles">
+
+  <div class="alert alert-success">
+    {{articles.length}} adet makale bulundu.
+  </div>
+
+  <ng-template [ngTemplateOutlet]="articleList1"></ng-template>
+  
+  
+
+</div>
+
+<ng-template #no_articles>
+  <div class="alert alert-warning">
+    Herhangi bir makale bulunamadı
+  </div>
+
+</ng-template>
+
+<ng-template #articleList1>
+  <div class="card mb-3" *ngFor="let article of articles">
     <div class="row">
       <div class="col-md-4">
         <img src="assets/pictures/{{article.imageUrl}}" class="img-fluid rounded-start" alt="...">
@@ -13,4 +33,4 @@
       </div>
     </div>
   </div>
-
+</ng-template>
