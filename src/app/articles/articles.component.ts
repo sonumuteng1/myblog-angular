@@ -16,6 +16,7 @@ export class ArticlesComponent implements OnInit {
   }
  articles:Article[];
  articleRepository:ArticleRepository;
+ filterText:string="";
 
  constructor (){
   this.articleRepository=new ArticleRepository();

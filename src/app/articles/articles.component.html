@@ -1,7 +1,18 @@
+<!-- TODO!!! text truncate yapılabilir tanıtım yazısını kısaltmak için -->
+<!-- Eğer farklı bir template kullanmak veya denemek istiyorsak onuda #articleList2
+olarak tanımlayıp çağırabiliriz. Eskisini silmemize gerek yok. Bu template 
+uygulamada başka yerlerde de çağırılabilir.  -->
+
+<!-- Üçüncü bir template tanımlanıp bu template'e dışarıdan veri gönderilebilir
+Bu template gönderilen veri bu template içinde kullanılabilir. 24. Video 14.00 da açıklaması var.  -->
+
 <div *ngIf="articles.length>0; else no_articles">
 
   <div class="alert alert-success">
     {{articles.length}} adet makale bulundu.
+  </div>
+  <div class="mb-3">
+    <input type="text" class="form-control" [(ngModel)]="filterText" placeholder="Search...">
   </div>
 
   <ng-template [ngTemplateOutlet]="articleList1"></ng-template>
@@ -18,7 +29,7 @@
 </ng-template>
 
 <ng-template #articleList1>
-  <div class="card mb-3" *ngFor="let article of articles">
+  <div class="card mb-3" *ngFor="let article of articles | articleFilter:filterText">
     <div class="row">
       <div class="col-md-4">
         <img src="assets/pictures/{{article.imageUrl}}" class="img-fluid rounded-start" alt="...">
@@ -27,8 +38,9 @@
         <div class="card-body">
           <h5 class="card-title">{{article.title}}</h5>
           <p class="card-text">{{article.description}}</p>
+          <p class="card-text"><small class="text-muted">Issue Date: {{article.issueDate}}</small></p>
           <button type="button" class="btn btn-dark">Details</button>
-          <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+          
         </div>
       </div>
     </div>

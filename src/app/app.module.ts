@@ -12,6 +12,9 @@ import { ArticleDetailComponent } from './topics/article-detail/article-detail.c
 import { ArticleDetailsComponent } from './article-details/article-details.component';
 import { ArticlesComponent } from './articles/articles.component';
 import { CategoryComponent } from './category/category.component';
+import { FormsModule } from '@angular/forms';
+import { ArticleFilterPipe } from './pipes/article-filter.pipe';
+
 
 @NgModule({
   declarations: [// Bir component eklemek istediğimizde buraya ekleriz. 
@@ -22,14 +25,17 @@ import { CategoryComponent } from './category/category.component';
     CsharpComponent,
     AngularComponent,
     FlutterComponent,
-    
     ArticleDetailComponent,
-          ArticleDetailsComponent,
-          ArticlesComponent,
-          CategoryComponent
+    ArticleDetailsComponent,
+    ArticlesComponent,
+    CategoryComponent,
+    ArticleFilterPipe
+    
+
   ],
   imports: [ //dışarıdan bir modül eklemek istediğimizde buraya ekleriz. 
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [// servisler burada eklenir. 
 
