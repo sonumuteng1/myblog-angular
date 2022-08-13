@@ -1,5 +1,13 @@
 <ul class="list-group">
-    <li class="list-group-item d-flex justify-content-between align-items-center " *ngFor="let category of categories">
+  <li (click)="selectCategory()" 
+      [class.active]="displayAll"
+      class="list-group-item d-flex justify-content-between"> 
+      All Categories     
+    </li>
+    <li href="#" (click)="selectCategory(category)" 
+    class="list-group-item d-flex justify-content-between align-items-center " 
+    [class.active]="!displayAll && selectedCategory.id==category.id"
+    *ngFor="let category of categories">
       {{category.name}}
       <span class="badge bg-dark rounded-pill">{{category.articles_count}}</span>
     </li>

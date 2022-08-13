@@ -39,7 +39,11 @@ Bu template gönderilen veri bu template içinde kullanılabilir. 24. Video 14.0
           <h5 class="card-title">{{article.title}}</h5>
           <p class="card-text">{{article.description}}</p>
           <p class="card-text"><small class="text-muted">Issue Date: {{article.issueDate}}</small></p>
-          <button type="button" class="btn btn-dark">Details</button>
+          <div>
+            <button type="button" class="btn btn-dark">Details</button>
+            <!-- cathces article and sends to the ts -->
+            <button (click)="addToFav($event,article)" type="button" class="btn btn-primary ms-1">Add to Fav</button>
+          </div>
           
         </div>
       </div>

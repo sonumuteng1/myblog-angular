@@ -7,10 +7,10 @@ export class CategoryRepository{
 
     constructor(){
         this.categories=[{id:1,name:"Angular",articles_count:6},
-        {id:1,name:"C#",articles_count:8},
-        {id:1,name:"Flutter",articles_count:2},
-        {id:1,name:"Sql",articles_count:4},
-        {id:1,name:"Others",articles_count:3},
+        {id:2,name:"C#",articles_count:8},
+        {id:3,name:"Flutter",articles_count:2},
+        {id:4,name:"Sql",articles_count:4},
+        {id:5,name:"Others",articles_count:3},
         ];
     }
     getCategories():Category[]{
