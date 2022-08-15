@@ -14,6 +14,7 @@ import { ArticlesComponent } from './articles/articles.component';
 import { CategoryComponent } from './category/category.component';
 import { FormsModule } from '@angular/forms';
 import { ArticleFilterPipe } from './pipes/article-filter.pipe';
+import { AlertifyService } from './services/alertify.service';
 
 
 @NgModule({
@@ -30,7 +31,7 @@ import { ArticleFilterPipe } from './pipes/article-filter.pipe';
     ArticlesComponent,
     CategoryComponent,
     ArticleFilterPipe
-    
+
 
   ],
   imports: [ //dışarıdan bir modül eklemek istediğimizde buraya ekleriz. 
@@ -38,14 +39,14 @@ import { ArticleFilterPipe } from './pipes/article-filter.pipe';
     FormsModule
   ],
   providers: [// servisler burada eklenir. 
-
+    AlertifyService
   ],
   bootstrap: [AppComponent] // Başlangıç modülü olarak belirlenen modül
 })
 export class AppModule { }
 
 
-// app Component başlangıç componenti olarak seçildi. 
-//bunun çağırılması app kendi selector ü ile oluyor. app-root adıyla. 
+// app Component başlangıç componenti olarak seçildi.
+//bunun çağırılması app kendi selector ü ile oluyor. app-root adıyla.
 // app rootu çağıran yer index.html. app root çağırılınca alt komponentlerde çağırılıyor
 // alt komponentlerin tanımlanması app.component.html sayfası içerisinde yapılır.

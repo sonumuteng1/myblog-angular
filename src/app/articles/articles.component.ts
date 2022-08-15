@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Article } from '../models/article';
 import { ArticleRepository } from '../models/article.repository';
+import { AlertifyService } from '../services/alertify.service';
+
+
 
 @Component({
   selector: 'app-articles',
@@ -18,7 +21,7 @@ export class ArticlesComponent implements OnInit {
  articleRepository:ArticleRepository;
  filterText:string="";
 
- constructor (){
+ constructor (private alertify:AlertifyService){
   this.articleRepository=new ArticleRepository();
   this.articles=this.articleRepository.getArticles();
 
@@ -32,10 +35,12 @@ export class ArticlesComponent implements OnInit {
     $event.target.innerText="Remove from List";
     $event.target.classList.remove("btn-primary");
     $event.target.classList.add("btn-danger");
+    this.alertify.success(article.title+" "+"has been added to the list");
   }else{
     $event.target.innerText="Add to List";
     $event.target.classList.remove("btn-danger");
     $event.target.classList.add("btn-primary");
+    this.alertify.error(article.title+" "+"has been removed from the list");
   }
 
  }
