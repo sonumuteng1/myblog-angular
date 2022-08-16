@@ -15,6 +15,7 @@ import { CategoryComponent } from './category/category.component';
 import { FormsModule } from '@angular/forms';
 import { ArticleFilterPipe } from './pipes/article-filter.pipe';
 import { AlertifyService } from './services/alertify.service';
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { AlertifyService } from './services/alertify.service';
   ],
   imports: [ //dışarıdan bir modül eklemek istediğimizde buraya ekleriz. 
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [// servisler burada eklenir. 
     AlertifyService

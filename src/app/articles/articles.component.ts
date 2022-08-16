@@ -1,14 +1,17 @@
+
 import { Component, OnInit } from '@angular/core';
 import { Article } from '../models/article';
-import { ArticleRepository } from '../models/article.repository';
+
 import { AlertifyService } from '../services/alertify.service';
+import { ArticleService } from '../services/article.service';
 
 
 
 @Component({
   selector: 'app-articles',
   templateUrl: './articles.component.html',
-  styleUrls: ['./articles.component.css']
+  styleUrls: ['./articles.component.css'],
+  providers:[ArticleService]
 })
 export class ArticlesComponent implements OnInit {
  
@@ -16,14 +19,18 @@ export class ArticlesComponent implements OnInit {
  
 
   ngOnInit(): void {
+    this.articleService.getArticles().subscribe(data=>{
+      this.articles=data;
+    });
   }
- articles:Article[];
- articleRepository:ArticleRepository;
+ articles:Article[]=[];
+ 
  filterText:string="";
 
- constructor (private alertify:AlertifyService){
-  this.articleRepository=new ArticleRepository();
-  this.articles=this.articleRepository.getArticles();
+ constructor (
+  private alertify:AlertifyService,
+  private articleService:ArticleService){
+  
 
  }
  //gets article infos from html when user choose an article
