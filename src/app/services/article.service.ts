@@ -11,10 +11,21 @@ export class ArticleService{
 
     constructor(private http:HttpClient){}
        
-    getArticles():Observable<Article[]>{
+    getArticles(categoryId:number):Observable<Article[]>{
+        
+        let newUrl=this.url;
+        if(categoryId){
+            newUrl+="?categoryId="+categoryId;
+        }
 
-        return this.http.get<Article[]>(this.url).
+        return this.http.get<Article[]>(newUrl).
         pipe(tap(data=>console.log(data)));
+    }
+
+    getArticleById(articleId:number):Observable<Article>{
+        return this.http.get<Article>(this.url+"/"+articleId).
+        pipe(tap(data=>console.log(data)));
+
     }
     
 

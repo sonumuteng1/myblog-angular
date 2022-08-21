@@ -16,6 +16,7 @@ import { FormsModule } from '@angular/forms';
 import { ArticleFilterPipe } from './pipes/article-filter.pipe';
 import { AlertifyService } from './services/alertify.service';
 import {HttpClientModule} from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import {HttpClientModule} from '@angular/common/http';
     BrowserModule,
     FormsModule,
     HttpClientModule,
+    AppRoutingModule,
   ],
   providers: [// servisler burada eklenir. 
     AlertifyService

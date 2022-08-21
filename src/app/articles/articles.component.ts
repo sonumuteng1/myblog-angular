@@ -1,5 +1,6 @@
 
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Article } from '../models/article';
 
 import { AlertifyService } from '../services/alertify.service';
@@ -21,12 +22,16 @@ export class ArticlesComponent implements OnInit {
 
   constructor(
     private alertify: AlertifyService,
-    private articleService: ArticleService) {}
+    private articleService: ArticleService,
+    private activatedRoute:ActivatedRoute) {}
 
   ngOnInit(): void {
-    this.articleService.getArticles().subscribe(data => {
+    this.activatedRoute.params.subscribe(params=>{
+     this.articleService.getArticles(params["categoryId"]).subscribe(data => {
       this.articles = data;
     }, error => console.log(error));
+    });
+    
   }
 
 

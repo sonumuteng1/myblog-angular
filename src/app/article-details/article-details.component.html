@@ -1,0 +1,15 @@
+<div *ngIf="article else no_article">
+    <div class="card" style="width: 30rem;">
+        <img src="assets/pictures/{{article.imageUrl}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">{{article.description}}</p>
+        </div>
+      </div>
+</div>
+<ng-template #no_article>
+    <div class="alert alert-warning">
+      Herhangi bir makale bulunamadı
+    </div>
+  
+  </ng-template>
+
