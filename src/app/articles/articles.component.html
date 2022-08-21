@@ -5,6 +5,9 @@ uygulamada başka yerlerde de çağırılabilir.  -->
 
 <!-- Üçüncü bir template tanımlanıp bu template'e dışarıdan veri gönderilebilir
 Bu template gönderilen veri bu template içinde kullanılabilir. 24. Video 14.00 da açıklaması var.  -->
+<div class="alert alert-danger" *ngIf="error">
+Bilinmeyen bir hata oluştu.
+</div>
 
 <div *ngIf="articles.length>0; else no_articles">
 
