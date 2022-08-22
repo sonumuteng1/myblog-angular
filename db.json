@@ -1,21 +1,100 @@
 {
-    "articles":[
-        {"id":1,"title":"C# Giriş Seviye","categoryId":2,"issueDate":"20.02.2022","description":"C Sharp giriş seviyesinde bilgilerin verildiği forum yazısı. Yazının devamını okumak için details butonuna tıklayabilirsiniz...","imageUrl":"csharpwhite.png"},
-        {"id":2,"title":"Angular Giriş Seviye","categoryId":1,"issueDate":"25.12.2021","description":"Angular orta seviye bilgilerin verildiği forum yazısı. Yazının devamını okumak için details butonuna tıklayabilirsiniz...","imageUrl":"angularcover.png"},
-        {"id":3,"title":"C# İleri Seviye","categoryId":2,"issueDate":"20.02.2022","description":"C Sharp ileri seviye bilgilerin verildiği forum yazısı. Yazının devamını okumak için details butonuna tıklayabilirsiniz...","imageUrl":"csharpwhite.png"},
-        {"id":4,"title":"Angular Orta Seviye","categoryId":1,"issueDate":"20.02.2019","description":"Angular giriş seviyesinde bilgilerin verildiği forum yazısı. Yazının devamını okumak için details butonuna tıklayabilirsiniz...","imageUrl":"angularcover.png"},
-        {"id":5,"title":"C# Orta Seviye","categoryId":2,"issueDate":"22.07.2020","description":"C Sharp orta seviye bilgilerin verildiği forum yazısı. Yazının devamını okumak için details butonuna tıklayabilirsiniz...","imageUrl":"csharpwhite.png"},
-        {"id":6,"title":"C# Başlangıç Seviye","categoryId":2,"issueDate":"25.12.2021","description":"C Sharp başlangıç seviye bilgilerin verildiği forum yazısı. Yazının devamını okumak için details butonuna tıklayabilirsiniz...","imageUrl":"csharpwhite.png"},
-        {"id":7,"title":"Siber Güvenlik Giriş","categoryId":5,"issueDate":"25.12.2021","description":"C Sharp başlangıç seviye bilgilerin verildiği forum yazısı. Yazının devamını okumak için details butonuna tıklayabilirsiniz...","imageUrl":"csharpwhite.png"}
-    
-    ],
-    "categories":[
-        { "id": 1, "name": "angular", "articles_count": 6 },
-        { "id": 2, "name": "c#", "articles_count": 8 },
-        { "id": 3, "name": "flutter", "articles_count": 2 },
-        { "id": 4, "name": "sql", "articles_count": 4 },
-        { "id": 5, "name": "cyber security", "articles_count": 3 },
-        { "id": 6, "name": "Others", "articles_count": 3 }
-       
-    ]
+  "articles": [
+    {
+      "id": 1,
+      "title": "C# Giriş Seviye",
+      "categoryId": 2,
+      "issueDate": 20.02,
+      "description": "C Sharp giriş seviyesinde bilgilerin verildiği forum yazısı. Yazının devamını okumak için details butonuna tıklayabilirsiniz...",
+      "detail": "Duis at vehicula ex.",
+      "imageUrl": "csharpwhite.png"
+    },
+    {
+      "id": 2,
+      "title": "Angular Giriş Seviye",
+      "categoryId": 1,
+      "issueDate": 25.12,
+      "description": "Angular orta seviye bilgilerin verildiği forum yazısı. Yazının devamını okumak için details butonuna tıklayabilirsiniz...",
+      "detail": "Duis at vehicula ex.",
+      "imageUrl": "angularcover.png"
+    },
+    {
+      "id": 3,
+      "title": "C# İleri Seviye",
+      "categoryId": 2,
+      "issueDate": 20.02,
+      "description": "C Sharp ileri seviye bilgilerin verildiği forum yazısı. Yazının devamını okumak için details butonuna tıklayabilirsiniz...",
+      "detail": "Duis at vehicula ex.",
+      "imageUrl": "csharpwhite.png"
+    },
+    {
+      "id": 4,
+      "title": "Angular Orta Seviye",
+      "categoryId": 1,
+      "issueDate": 20.02,
+      "description": "Angular giriş seviyesinde bilgilerin verildiği forum yazısı. Yazının devamını okumak için details butonuna tıklayabilirsiniz...",
+      "detail": "Duis at vehicula ex.",
+      "imageUrl": "angularcover.png"
+    },
+    {
+      "id": 5,
+      "title": "C# Orta Seviye",
+      "categoryId": 2,
+      "issueDate": 22.07,
+      "description": "C Sharp orta seviye bilgilerin verildiği forum yazısı. Yazının devamını okumak için details butonuna tıklayabilirsiniz...",
+      "detail": "Duis at vehicula ex.",
+      "imageUrl": "csharpwhite.png"
+    },
+    {
+      "id": 6,
+      "title": "C# Başlangıç Seviye",
+      "categoryId": 2,
+      "issueDate": 25.12,
+      "description": "C Sharp başlangıç seviye bilgilerin verildiği forum yazısı. Yazının devamını okumak için details butonuna tıklayabilirsiniz...",
+      "detail": "Duis at vehicula ex.",
+      "imageUrl": "csharpwhite.png"
+    },
+    {
+      "id": 7,
+      "title": "Siber Güvenlik Giriş",
+      "categoryId": 5,
+      "issueDate": 5.12,
+      "description": "Siber Güvenlik başlangıç seviye bilgilerin verildiği forum yazısı. Yazının devamını okumak için details butonuna tıklayabilirsiniz... ",
+      "detail": "Some Terms about Malwares and Attacks  • Worms, self-replicating malwares which do not require human interaction. They try spread and cripple resources or turn computers into zombies and target vulnerabilities in operating systems to get into networks. Worms gain access through backdoors built into software, through unintentional software vulnerabilities, or flash drives. Worms can be used to launch DDoS attacks, steal sensitive data, or conduct ransomware attacks. • Polymorphic virus, an evolution of the malicious code, encrypts and duplicates itself to make itself harder to find.  • Trojan Horses/Trojans, are hidden malwares which cause damage to a system or give an attack access. They are usually introducted into the environment to a computer by posing as a game, wallpaper, or a download.  • Fileless malwares do not install anything initially, instead, they make changes to files that are native to the operating system, such as PowerShell. Because the operating system recognizes the files as legitimate, a fileless attack is not caught by antivirus software.  • Mobile malwares are targeting mobile devices, mostly jailbroken phones, which lack the default protections.  • Wiper malwares have a single purpose: to erase user data and ensure it can’t be recovered. Wiper malwares are a solution for non-repudiation. Threat actors use wipers to cover up their fingerprints. • Spywares collect data about users’ activities such as web browsing history, personal information, marketing information, any information the attacker wants to obtain.  • Adwares, track a user’s surfing activity and download advertisements automatically.  • RATs, remote access tool or remote access trojans, allow the attacker to gain access and control the computer. • Rootkit is a piece of software intended to take control of a computer with administrative privileges.  • Ransomware restricts the access to the computer and the data on it. The attacker demands a ransom to let the data back.  • Botnets are infected computers controlled without the owners' consent. These computers, unknowingly, support attackers with their resources for attacks like spam, denial-of-service attacks, phishing, spyware, or stealing personal information.  • Zombies/Zombie drones are the hi-jacked computers used for malicious activity. • Bot master is a person who commands botnets remotely. • Bot herder is a hacker who looks for vulnerable computers to be controlled as a botnet. • Keylogger records every keystroke made by a user.  • Logic bombs are triggered by a specific event and they perform whatever they are programmed to do, such as erasing data or corrupting systems.  • APTs, advanced persistent threats, are used to get access and monitor the network to steal information while staying undetected for a long time. Usually they target military, government, finance organizations, or companies which have high value information.",
+      "imageUrl": "csharpwhite.png"
+    }
+   
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "angular",
+      "articles_count": 6
+    },
+    {
+      "id": 2,
+      "name": "c#",
+      "articles_count": 8
+    },
+    {
+      "id": 3,
+      "name": "flutter",
+      "articles_count": 2
+    },
+    {
+      "id": 4,
+      "name": "sql",
+      "articles_count": 4
+    },
+    {
+      "id": 5,
+      "name": "cyber security",
+      "articles_count": 3
+    },
+    {
+      "id": 6,
+      "name": "Others",
+      "articles_count": 3
+    }
+  ]
 }

@@ -1,0 +1,24 @@
+<h1>Create Article</h1>
+
+<form >
+<div class="mb-3">
+    <label for="title" class="form-label">Title</label>
+    <input #title type="text" class="form-control">
+</div>
+<div class="mb-3">
+    <label for="description" class="form-label">Description</label>
+    <textarea #description type="text" class="form-control"></textarea>
+</div>
+<div class="mb-3">
+    <label for="imageUrl" class="form-label">Image</label>
+    <input #imageUrl type="text" class="form-control">
+</div>
+<div class="mb-3">
+    <label for="categoryId" class="form-label">Category</label>
+    <select #categoryId class="form-select">
+        <option  *ngFor="let category of categories" [value]="category.id">{{category.name | titlecase}}</option>
+    </select>
+</div>
+<button class="btn btn-primary" (click)="createArticle(title,description,imageUrl,categoryId)">Create</button>
+
+</form>

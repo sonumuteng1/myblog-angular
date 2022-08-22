@@ -1,8 +1,12 @@
+<!-- TODO CSS işlemleri css sayfasına alınmalı -->
+
 <div *ngIf="article else no_article">
-    <div class="card" style="width: 30rem;">
-        <img src="assets/pictures/{{article.imageUrl}}" class="card-img-top" alt="...">
+    <div class="card" >
+        <img src="assets/pictures/{{article.imageUrl}}" height="400" class="card-img-top" alt="...">
         <div class="card-body">
-          <p class="card-text">{{article.description}}</p>
+          <p class="card-text" style="font-size: 2rem; font-weight:bold">{{article.title}}</p>
+          <p class="card-text">{{article.detail}}</p>
+          
         </div>
       </div>
 </div>

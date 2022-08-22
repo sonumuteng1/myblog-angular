@@ -17,6 +17,7 @@ import { ArticleFilterPipe } from './pipes/article-filter.pipe';
 import { AlertifyService } from './services/alertify.service';
 import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
+import { ArticleCreateComponent } from './article-create/article-create.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { AppRoutingModule } from './app-routing.module';
     ArticleDetailsComponent,
     ArticlesComponent,
     CategoryComponent,
-    ArticleFilterPipe
+    ArticleFilterPipe,
+    ArticleCreateComponent
 
 
   ],

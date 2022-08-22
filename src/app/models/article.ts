@@ -4,6 +4,8 @@ id:number;
 title:string;
 description:string;
 imageUrl:string;
-issueDate:string;
+issueDate:number;
+detail:string;
+categoryId:number;
 
 }
