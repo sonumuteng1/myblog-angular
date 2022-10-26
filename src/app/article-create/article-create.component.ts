@@ -22,9 +22,9 @@ export class ArticleCreateComponent implements OnInit {
               private alertify:AlertifyService ) { }
 
   ngOnInit(): void {
-    this.categoryService.getCategories().subscribe(data=>{
-      this.categories=data;
-    })
+    // this.categoryService.getCategories().subscribe(data=>{
+    //   this.categories=data;
+    // })
   }
 
   createArticle(title:any,description:any,imageUrl:any,categoryId:any){

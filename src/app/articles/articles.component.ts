@@ -16,7 +16,19 @@ import { ArticleService } from '../services/article.service';
 })
 export class ArticlesComponent implements OnInit {
 
-  articles: Article[] = [];
+  articles: Article[] = [{"id":1,"title":"string","description":"Angular Giriş","imageUrl":"angularcover.png","issueDate":10,"detail":"string",
+    "categoryId":2},
+    {"id":1,"title":"string","description":"Angular Orta Seviye","imageUrl":"angularcovergray.png","issueDate":10.2022,"detail":"string",
+    "categoryId":2},
+    {"id":1,"title":"string","description":"C# Giriş","imageUrl":"csharpwhite.png","issueDate":10.2022,"detail":"string",
+    "categoryId":2},
+    {"id":1,"title":"string","description":"C# Orta Seviye","imageUrl":"csharpcover.png","issueDate":10.2022,"detail":"string",
+    "categoryId":2},
+    {"id":1,"title":"string","description":"C# Uygulamaları","imageUrl":"csharpwhite.png","issueDate":10.2022,"detail":"string",
+    "categoryId":2}];
+
+
+
   filterText: string = "";
   error: any;
 
@@ -26,11 +38,13 @@ export class ArticlesComponent implements OnInit {
     private activatedRoute:ActivatedRoute) {}
 
   ngOnInit(): void {
-    this.activatedRoute.params.subscribe(params=>{
-     this.articleService.getArticles(params["categoryId"]).subscribe(data => {
-      this.articles = data;
-    }, error => console.log(error));
-    });
+
+    
+    // this.activatedRoute.params.subscribe(params=>{
+    //  this.articleService.getArticles(params["categoryId"]).subscribe(data => {
+    //   this.articles = data;
+    // }, error => console.log(error));
+    // });
     
   }
 

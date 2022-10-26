@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Article } from '../models/article';
 import { ArticleService } from '../services/article.service';
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 
 @Component({
   selector: 'app-article-details',
@@ -11,17 +12,34 @@ import { ArticleService } from '../services/article.service';
 })
 export class ArticleDetailsComponent implements OnInit {
 
-  article:Article;
+  article:any;
   constructor(private articleService:ArticleService,
-              private activatedRoute:ActivatedRoute) { }
+              private activatedRoute:ActivatedRoute,
+              private httpClient: HttpClient
+) { }
 
   ngOnInit(): void {
+    
 
     this.activatedRoute.params.subscribe(params=>{
       this.articleService.getArticleById(params["articleId"]).subscribe(data=>{
         this.article=data;
       })
+      
     })
+    //debugger;
+   // this.httpClient
+     // .get("http://localhost:53429/Articles")
+     // .subscribe((res)=>{
+    //    debugger;
+    //    this.article=res;
+        
+   //   }
+   //     
+    //  );
+
+    
   }
+  
 
 }
